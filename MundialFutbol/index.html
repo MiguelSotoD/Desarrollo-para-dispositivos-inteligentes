@@ -24,20 +24,20 @@
 </head>
 <body class="bg-white font-sans text-black">
   <!-- Navigation bar -->
-  <nav class="background-primary rounded-full max-w-[1484px] mx-auto mt-6 px-2 py-2 flex flex-wrap justify-center gap-4 md:gap-10 lg:gap-16 text-[16px] md:text-[20px] lg:text-[22px] text-white font-normal select-none">
-    <a class="flex items-center gap-2" href="#horarios">
+  <nav class="background-primary rounded-full max-w-[1484px] mx-auto mt-6 px-2 py-2 flex flex-col sm:flex-row flex-wrap justify-center items-center gap-2 sm:gap-4 md:gap-10 lg:gap-16 text-[16px] md:text-[20px] lg:text-[22px] text-white font-normal select-none w-full sm:w-auto">
+    <a class="flex items-center gap-2 w-full sm:w-auto justify-center py-2 sm:py-0 border-b border-white/10 sm:border-0" href="#horarios">
       <i class="fas fa-futbol"></i>
       Horario Partidos
     </a>
-    <a class="flex items-center gap-2 text-white" href="#reservar lugar">
+    <a class="flex items-center gap-2 text-white w-full sm:w-auto justify-center py-2 sm:py-0 border-b border-white/10 sm:border-0" href="#reservar lugar">
       <i class="fas fa-chair text-yellow-400"></i>
       Reserva Lugar
     </a>
-    <a class="flex items-center gap-2 text-white" href="#live">
+    <a class="flex items-center gap-2 text-white w-full sm:w-auto justify-center py-2 sm:py-0 border-b border-white/10 sm:border-0" href="#live">
       <i class="fas fa-dot-circle text-red-600"></i>
       Resultados Tiempo Real
     </a>
-    <a class="flex items-center gap-2 text-white">
+    <a class="flex items-center gap-2 text-white w-full sm:w-auto justify-center py-2 sm:py-0" href="#">
       <i class="fas fa-info-circle text-sky-400"></i>
       Informacion general
     </a>
@@ -336,16 +336,24 @@
   <style>
     @media (max-width: 400px) {
       nav {
-        flex-direction: column;
-        gap: 2px !important;
+        flex-direction: column !important;
+        gap: 0 !important;
         border-radius: 0 !important;
         padding: 4px !important;
+        width: 100vw !important;
+        min-width: 0 !important;
+        max-width: 100vw !important;
+        margin: 0 !important;
       }
-      main {
-        padding: 2px !important;
+      nav a {
+        width: 100vw !important;
+        justify-content: center !important;
+        border-bottom: 1px solid #ffffff22 !important;
+        padding: 10px 0 !important;
+        font-size: 15px !important;
       }
-      h2, h3 {
-        font-size: 14px !important;
+      nav a:last-child {
+        border-bottom: none !important;
       }
     }
     @media (max-width: 220px) {
@@ -353,6 +361,9 @@
         font-size: 10px !important;
         padding: 0 !important;
         margin: 0 !important;
+      }
+      nav{
+        height: 100vh !important;
       }
     }
   </style>
