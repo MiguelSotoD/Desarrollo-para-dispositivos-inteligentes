@@ -1,0 +1,360 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mundial futbol</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <style>
+    /* Custom scrollbar hidden for horizontal scroll */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .background-primary{
+        background-color: #333333;
+    }
+  </style>
+</head>
+<body class="bg-white font-sans text-black">
+  <!-- Navigation bar -->
+  <nav class="background-primary rounded-full max-w-[1484px] mx-auto mt-6 px-2 py-2 flex flex-wrap justify-center gap-4 md:gap-10 lg:gap-16 text-[16px] md:text-[20px] lg:text-[22px] text-white font-normal select-none">
+    <a class="flex items-center gap-2" href="#horarios">
+      <i class="fas fa-futbol"></i>
+      Horario Partidos
+    </a>
+    <a class="flex items-center gap-2 text-white" href="#reservar lugar">
+      <i class="fas fa-chair text-yellow-400"></i>
+      Reserva Lugar
+    </a>
+    <a class="flex items-center gap-2 text-white" href="#live">
+      <i class="fas fa-dot-circle text-red-600"></i>
+      Resultados Tiempo Real
+    </a>
+    <a class="flex items-center gap-2 text-white">
+      <i class="fas fa-info-circle text-sky-400"></i>
+      Informacion general
+    </a>
+  </nav>
+
+  <main class="max-w-full md:max-w-[1484px] mx-auto px-1 md:px-4 mt-6 md:mt-10 space-y-6 md:space-y-10">
+    <!-- Horarios de partidos header and filter -->
+    <section>
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 md:mb-6 gap-2 md:gap-0">
+        <h2 id="horarios" class="font-semibold text-[20px] md:text-[28px] leading-5" >Horarios de partidos</h2>
+        <button class="flex items-center gap-1 text-[16px] md:text-[20px] text-gray-700 font-normal select-none">
+          <i class="fas fa-calendar-alt"></i>
+          Todas las fechas
+          <i class="fas fa-chevron-down text-[16px] md:text-[20px]"></i>
+        </button>
+      </div>
+
+      <!-- Cards container with horizontal scroll on small screens -->
+      <div class="flex gap-3 md:gap-6 overflow-x-auto no-scrollbar pb-2 cursor-pointer">
+        <!-- First card with white background and border -->
+        <article
+          class="min-w-[220px] sm:min-w-[280px] md:min-w-[344px] max-w-[90vw] md:max-w-[344px] min-h-[120px] md:min-h-[160px] rounded-lg background-primary hover:bg-white hover:text-black border hover:border-black p-2 md:p-4 flex flex-col gap-1 text-xs md:text-sm lg:text-base text-gray-300"
+        >
+          <div class="flex justify-center items-center gap-4 md:gap-10 mb-2 md:mb-5 font-medium text-[16px] md:text-[24px] text-auto">
+            <span>Leon</span>
+            <span>VS</span>
+            <span>Pumas</span>
+          </div>
+          <div class="flex flex-col gap-1 md:gap-3">
+            <p class="text-[14px] md:text-[20px] font-normal">Mundial de futbol</p>
+            <p class="text-[14px] md:text-[20px] font-normal">Sab, 31/05/2025</p>
+            <p class="text-[14px] md:text-[20px] font-normal">1:00 p.m.</p>
+          </div>
+        </article>
+
+        <!-- Other cards with dark background and white text -->
+        <article
+          class="min-w-[220px] sm:min-w-[280px] md:min-w-[344px] max-w-[90vw] md:max-w-[344px] min-h-[120px] md:min-h-[160px] rounded-lg background-primary hover:bg-white hover:text-black border hover:border-black p-2 md:p-4 flex flex-col gap-1 text-xs md:text-sm lg:text-base text-gray-300"
+        >
+          <div class="flex justify-center items-center gap-4 md:gap-10 mb-2 md:mb-5 font-medium text-[16px] md:text-[24px] text-auto">
+            <span>America</span>
+            <span>VS</span>
+            <span>Juarez</span>
+          </div>
+          <div class="flex flex-col gap-1 md:gap-3">
+            <p class="text-[14px] md:text-[20px] font-normal">Mundial de futbol</p>
+            <p class="text-[14px] md:text-[20px] font-normal">Sab, 31/05/2025</p>
+            <p class="text-[14px] md:text-[20px] font-normal">3:00 p.m.</p>
+          </div>
+        </article>
+
+        <article
+          class="min-w-[220px] sm:min-w-[280px] md:min-w-[344px] max-w-[90vw] md:max-w-[344px] min-h-[120px] md:min-h-[160px] rounded-lg background-primary hover:bg-white hover:text-black border hover:border-black p-2 md:p-4 flex flex-col gap-1 text-xs md:text-sm lg:text-base text-gray-300"
+        >
+          <div class="flex justify-center items-center gap-4 md:gap-10 mb-2 md:mb-5 font-medium text-[16px] md:text-[24px] text-auto">
+            <span>Pachuca</span>
+            <span>VS</span>
+            <span>Miami</span>
+          </div>
+          <div class="flex flex-col gap-1 md:gap-3">
+            <p class="text-[14px] md:text-[20px] font-normal">Mundial de futbol</p>
+            <p class="text-[14px] md:text-[20px] font-normal">Sab, 31/05/2025</p>
+            <p class="text-[14px] md:text-[20px] font-normal">5:00 p.m.</p>
+          </div>
+        </article>
+
+        <article
+          class="min-w-[220px] sm:min-w-[280px] md:min-w-[344px] max-w-[90vw] md:max-w-[344px] min-h-[120px] md:min-h-[160px] rounded-lg background-primary hover:bg-white hover:text-black border hover:border-black p-2 md:p-4 flex flex-col gap-1 text-xs md:text-sm lg:text-base text-gray-300"
+        >
+          <div class="flex justify-center items-center gap-4 md:gap-10 mb-2 md:mb-5 font-medium text-[16px] md:text-[24px] text-auto">
+            <span>Tijuana</span>
+            <span>VS</span>
+            <span>Toluca</span>
+          </div>
+          <div class="flex flex-col gap-1 md:gap-3">
+            <p class="text-[14px] md:text-[20px] font-normal">Mundial de futbol</p>
+            <p class="text-[14px] md:text-[20px] font-normal">Sab, 31/05/2025</p>
+            <p class="text-[14px] md:text-[20px] font-normal">5:30 p.m.</p>
+          </div>
+        </article>
+
+        <article
+          class="min-w-[220px] sm:min-w-[280px] md:min-w-[344px] max-w-[90vw] md:max-w-[344px] min-h-[120px] md:min-h-[160px] rounded-lg background-primary hover:bg-white hover:text-black border hover:border-black p-2 md:p-4 flex flex-col gap-1 text-xs md:text-sm lg:text-base text-gray-300"
+        >
+          <div class="flex justify-center items-center gap-4 md:gap-10 mb-2 md:mb-5 font-medium text-[16px] md:text-[24px] text-auto">
+            <span>Rayados</span>
+            <span>VS</span>
+            <span>Chivas</span>
+          </div>
+          <div class="flex flex-col gap-1 md:gap-3">
+            <p class="text-[14px] md:text-[20px] font-normal">Mundial de futbol</p>
+            <p class="text-[14px] md:text-[20px] font-normal">Sab, 31/05/2025</p>
+            <p class="text-[14px] md:text-[20px] font-normal">7:00 p.m.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Reserva lugar section -->
+    <section>
+      <h3 class="font-semibold text-[20px] md:text-[28px] leading-5 mb-2 md:mb-4" id="reservar lugar">Reserva lugar</h3>
+      <div class="flex gap-3 md:gap-8 overflow-x-auto no-scrollbar pb-2">
+        <!-- Each reservation card -->
+        <article
+            class="min-w-[180px] sm:min-w-[300px] md:min-w-[463px] max-w-[90vw] md:max-w-[463px] min-h-[50px] bg-white border border-gray-200 rounded-md p-2 flex items-center gap-2 text-[14px] md:text-[20px] text-black select-none shadow-lg"
+        >
+            <div class="flex flex-col items-center text-center gap-1 md:gap-2 font-semibold leading-4 text-black w-10 md:w-12">
+                <span class="text-[12px] md:text-base">MAY</span>
+                <span class="font-normal text-[16px] md:text-[20px]">22</span>
+            </div>
+            <div class="flex-1 truncate">
+                Club América vs Toluca - Clausura Final
+                <span class="text-[12px] md:text-[16px] font-normal text-[#333333] block truncate">
+                    20:00 | Estadio Ciudad de los Deportes
+                </span>
+            </div>
+            <button class="inline-block bg-white text-black hover:bg-green-600 hover:text-white hover:border-white cursor-pointer border border-black text-[11px] md:text-[13px] font-semibold rounded-full px-2 py-[1px]">
+                <span class="px-2 py-[1px]">Ir</span>
+            </button>
+        </article>
+
+        <article
+            class="min-w-[180px] sm:min-w-[300px] md:min-w-[463px] max-w-[90vw] md:max-w-[463px] min-h-[50px] bg-white border border-gray-200 rounded-md p-2 flex items-center gap-2 text-[14px] md:text-[20px] text-black select-none shadow-lg"
+        >
+            <div class="flex flex-col items-center text-center gap-1 md:gap-2 font-semibold leading-4 text-black w-10 md:w-12">
+                <span class="text-[12px] md:text-base">MAY</span>
+                <span class="font-normal text-[16px] md:text-[20px]">22</span>
+            </div>
+            <div class="flex-1 truncate">
+                Club América vs Toluca - Clausura Final
+                <span class="text-[12px] md:text-[16px] font-normal text-[#333333] block truncate">
+                    20:00 | Estadio Ciudad de los Deportes
+                </span>
+            </div>
+            <button class="inline-block bg-white text-black hover:bg-green-600 hover:text-white hover:border-white cursor-pointer border border-black text-[11px] md:text-[13px] font-semibold rounded-full px-2 py-[1px]">
+                <span class="px-2 py-[1px]">Ir</span>
+            </button>
+        </article>
+
+        <article
+            class="min-w-[180px] sm:min-w-[300px] md:min-w-[463px] max-w-[90vw] md:max-w-[463px] min-h-[50px] bg-white border border-gray-200 rounded-md p-2 flex items-center gap-2 text-[14px] md:text-[20px] text-black select-none shadow-lg"
+        >
+            <div class="flex flex-col items-center text-center gap-1 md:gap-2 font-semibold leading-4 text-black w-10 md:w-12">
+                <span class="text-[12px] md:text-base">MAY</span>
+                <span class="font-normal text-[16px] md:text-[20px]">22</span>
+            </div>
+            <div class="flex-1 truncate">
+                Club América vs Toluca - Clausura Final
+                <span class="text-[12px] md:text-[16px] font-normal text-[#333333] block truncate">
+                    20:00 | Estadio Ciudad de los Deportes
+                </span>
+            </div>
+            <button class="inline-block bg-white text-black hover:bg-green-600 hover:text-white hover:border-white cursor-pointer border border-black text-[11px] md:text-[13px] font-semibold rounded-full px-2 py-[1px]">
+                <span class="px-2 py-[1px]">Ir</span>
+            </button>
+        </article>
+
+        <article
+            class="min-w-[180px] sm:min-w-[300px] md:min-w-[463px] max-w-[90vw] md:max-w-[463px] min-h-[50px] bg-white border border-gray-200 rounded-md p-2 flex items-center gap-2 text-[14px] md:text-[20px] text-black select-none shadow-lg"
+        >
+            <div class="flex flex-col items-center text-center gap-1 md:gap-2 font-semibold leading-4 text-black w-10 md:w-12">
+                <span class="text-[12px] md:text-base">MAY</span>
+                <span class="font-normal text-[16px] md:text-[20px]">22</span>
+            </div>
+            <div class="flex-1 truncate">
+                Club América vs Toluca - Clausura Final
+                <span class="text-[12px] md:text-[16px] font-normal text-[#333333] block truncate">
+                    20:00 | Estadio Ciudad de los Deportes
+                </span>
+            </div>
+            <button class="inline-block bg-white text-black hover:bg-green-600 hover:text-white hover:border-white cursor-pointer border border-black text-[11px] md:text-[13px] font-semibold rounded-full px-2 py-[1px]">
+                <span class="px-2 py-[1px]">Ir</span>
+            </button>
+        </article>
+      </div>
+    </section>
+
+    <!-- En directo section -->
+    <section>
+      <h3 class="font-semibold text-xs md:text-[28px] leading-5 mb-2 md:mb-4" id="live">En directo</h3>
+      <div class="flex gap-3 md:gap-8 overflow-x-auto no-scrollbar pb-2">
+        <!-- Each live match card -->
+        <article
+          class="min-w-[160px] sm:min-w-[220px] md:min-w-[340px] max-w-[90vw] md:max-w-[340px] border border-gray-x200 rounded-md flex items-center gap-1 md:gap-2 text-[12px] md:text-[16px] text-auto select-none shadow-lg"
+        >
+          <div class="flex flex-col items-center text-center font-semibold leading-4 text-red-600 w-6 md:w-10">
+            <span>3'</span>
+          </div>
+          <div class="flex-1 flex flex-col font-normal leading-4 gap-1 md:gap-2">
+            <span>Tijuana</span>
+            <span>Toluca</span>
+          </div>
+          <div class="flex flex-col items-center text-center font-semibold leading-4 text-black w-4 md:w-6 gap-1 md:gap-2">
+            <span class="text-red-600">0</span>
+            <span class="text-red-600">0</span>
+          </div>
+          <div class="px-1 md:px-2">
+            <span
+              class="inline-block bg-red-600 text-white text-[7px] md:text-[8px] font-semibold rounded-full px-2 py-[1px]"
+              >LIVE</span
+            >
+          </div>
+        </article>
+
+         <article
+          class="min-w-[160px] sm:min-w-[220px] md:min-w-[340px] max-w-[90vw] md:max-w-[340px] border border-gray-x200 rounded-md flex items-center gap-1 md:gap-2 text-[12px] md:text-[16px] text-auto select-none shadow-lg"
+        >
+          <div class="flex flex-col items-center text-center font-semibold leading-4 text-red-600 w-6 md:w-10">
+            <span>17'</span>
+          </div>
+          <div class="flex-1 flex flex-col font-normal leading-4 gap-1 md:gap-2">
+            <span>Amercia</span>
+            <span>Juarez</span>
+          </div>
+          <div class="flex flex-col items-center text-center font-semibold leading-4 text-black w-4 md:w-6 gap-1 md:gap-2">
+            <span class="text-red-600">2</span>
+            <span class="text-red-600">0</span>
+          </div>
+          <div class="px-1 md:px-2">
+            <span
+              class="inline-block bg-red-600 text-white text-[7px] md:text-[8px] font-semibold rounded-full px-2 py-[1px]"
+              >LIVE</span
+            >
+          </div>
+        </article>
+
+         <article
+          class="min-w-[160px] sm:min-w-[220px] md:min-w-[340px] max-w-[90vw] md:max-w-[340px] border border-gray-x200 rounded-md flex items-center gap-1 md:gap-2 text-[12px] md:text-[16px] text-auto select-none shadow-lg"
+        >
+          <div class="flex flex-col items-center text-center font-semibold leading-4 text-red-600 w-6 md:w-10">
+            <span>24'</span>
+          </div>
+          <div class="flex-1 flex flex-col font-normal leading-4 gap-1 md:gap-2">
+            <span>Leon</span>
+            <span>Pumas</span>
+          </div>
+          <div class="flex flex-col items-center text-center font-semibold leading-4 text-black w-4 md:w-6 gap-1 md:gap-2">
+            <span class="text-red-600">4</span>
+            <span class="text-red-600">0</span>
+          </div>
+          <div class="px-1 md:px-2">
+            <span
+              class="inline-block bg-red-600 text-white text-[7px] md:text-[8px] font-semibold rounded-full px-2 py-[1px]"
+              >LIVE</span
+            >
+          </div>
+        </article>
+
+        <article
+          class="min-w-[160px] sm:min-w-[220px] md:min-w-[340px] max-w-[90vw] md:max-w-[340px] border border-gray-x200 rounded-md flex items-center gap-1 md:gap-2 text-[12px] md:text-[16px] text-auto select-none shadow-lg"
+        >
+          <div class="flex flex-col items-center text-center font-semibold leading-4 text-red-600 w-6 md:w-10">
+            <span>68'</span>
+          </div>
+          <div class="flex-1 flex flex-col font-normal leading-4 gap-1 md:gap-2">
+            <span>Rayados</span>
+            <span>Chivas</span>
+          </div>
+          <div class="flex flex-col items-center text-center font-semibold leading-4 text-black w-4 md:w-6 gap-1 md:gap-2">
+            <span class="text-red-600">1</span>
+            <span class="text-red-600">1</span>
+          </div>
+          <div class="px-1 md:px-2">
+            <span
+              class="inline-block bg-red-600 text-white text-[7px] md:text-[8px] font-semibold rounded-full px-2 py-[1px]"
+              >LIVE</span
+            >
+          </div>
+        </article>
+
+        <article
+          class="min-w-[160px] sm:min-w-[220px] md:min-w-[340px] max-w-[90vw] md:max-w-[340px] border border-gray-x200 rounded-md flex items-center gap-1 md:gap-2 text-[12px] md:text-[16px] text-auto select-none shadow-lg"
+        >
+          <div class="flex flex-col items-center text-center font-semibold leading-4 text-red-600 w-6 md:w-10">
+            <span>3'</span>
+          </div>
+          <div class="flex-1 flex flex-col font-normal leading-4 gap-1 md:gap-2">
+            <span>Tijuana</span>
+            <span>Toluca</span>
+          </div>
+          <div class="flex flex-col items-center text-center font-semibold leading-4 text-black w-4 md:w-6 gap-1 md:gap-2">
+            <span class="text-red-600">0</span>
+            <span class="text-red-600">0</span>
+          </div>
+          <div class="px-1 md:px-2">
+            <span
+              class="inline-block bg-red-600 text-white text-[7px] md:text-[8px] font-semibold rounded-full px-2 py-[1px]"
+              >LIVE</span
+            >
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    @media (max-width: 400px) {
+      nav {
+        flex-direction: column;
+        gap: 2px !important;
+        border-radius: 0 !important;
+        padding: 4px !important;
+      }
+      main {
+        padding: 2px !important;
+      }
+      h2, h3 {
+        font-size: 14px !important;
+      }
+    }
+    @media (max-width: 220px) {
+      nav, main, section, article, h2, h3, p, span, button {
+        font-size: 10px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+    }
+  </style>
+</body>
+</html>
