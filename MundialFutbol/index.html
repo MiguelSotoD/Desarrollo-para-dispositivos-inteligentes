@@ -25,7 +25,7 @@
 <body class="bg-white font-sans text-black">
   <!-- Navigation bar -->
   <nav class="background-primary rounded-full max-w-[1484px] mx-auto mt-6 px-2 py-2 flex flex-col sm:flex-row flex-wrap justify-center items-center gap-2 sm:gap-4 md:gap-10 lg:gap-16 text-[16px] md:text-[20px] lg:text-[22px] text-white font-normal select-none w-full sm:w-auto">
-    <a class="flex items-center gap-2 w-full sm:w-auto justify-center py-2 sm:py-0 border-b border-white/10 sm:border-0" href="#horarios">
+    <a class="flex items-center gap-2 w-full sm:w-auto justify-center py-2 sm:py-0 border-b border-white/10 sm:border-0" href="#horarios" id="partidos">
       <i class="fas fa-futbol"></i>
       Horario Partidos
     </a>
@@ -357,13 +357,30 @@
       }
     }
     @media (max-width: 220px) {
-      nav, main, section, article, h2, h3, p, span, button {
+      main, section, article, h2, h3, p, span, button {
         font-size: 10px !important;
         padding: 0 !important;
         margin: 0 !important;
       }
       nav{
         height: 100vh !important;
+        background-color: white !important;
+        font-size: 10px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      nav a {
+        background-color: #333333;
+        padding: 5px !important;
+        margin-top: 6px !important;
+        margin-bottom: 6px !important;
+        width: 90vw !important;
+        border-radius: 10px;
+        box-shadow: 0 3px 8px 0 rgba(0,0,0,0.40);
+      }
+      #partidos{
+        background-color: #319D36;
       }
     }
   </style>
